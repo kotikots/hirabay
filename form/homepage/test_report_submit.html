@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report Test</title>
+</head>
+<body>
+  <h2>Test Report Submit to Database</h2>
+  <button onclick="submitReport()">Submit Sample Report</button>
+  <p id="result"></p>
+
+  <script>
+    function submitReport() {
+      fetch("php/save_report.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userType: "seller",
+          userId: "S123",
+          userName: "Test Seller",
+          issue: "Did not deliver the item as promised."
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("result").innerText = JSON.stringify(data);
+      })
+      .catch(err => {
+        document.getElementById("result").innerText = "Error: " + err;
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.notification-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 999;
+}
+
+.dropdown-header {
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.notification-icon {
+    margin-right: 10px;
+}
+
+.notif-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.notif-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notif-content {
+  flex: 1;
+}
+
+.notif-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.notif-actions button {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #1f2a44;
+  color: white;
+}
+
+.notif-actions button:hover {
+  background-color: #324463;
+}
+
+.notification-dropdown.hidden {
+  display: none;
+}
+
+.notification-count {
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: top;
+}
